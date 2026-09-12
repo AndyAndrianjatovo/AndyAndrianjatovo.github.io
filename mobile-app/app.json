@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Lumière Photos",
+    "slug": "lumiere-photos",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "lumierephotos",
+    "splash": {
+      "backgroundColor": "#0B0B0C"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "family.lumierephotos.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0B0C"
+      },
+      "package": "family.lumierephotos.app"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "@react-native-cookies/cookies"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}
