@@ -8,100 +8,192 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wrap">
+    <header class="top">
+        <div class="brand">Andy®</div>
         <nav>
-            <a class="logo" href="#top">andy ✎</a>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <span class="label">Menu</span>
+            <button data-open="work">Work</button>
+            <button data-open="about">About</button>
+            <button data-open="playground">Playground</button>
+            <button data-open="contact">Contact</button>
         </nav>
+        <div>
+            <span class="label">Local time</span>
+            <span id="clock">--:--</span>
+        </div>
+        <div>
+            <span class="label">Working globally</span>
+            <!-- TODO: ta ville / ton pays -->
+            Madagascar
+        </div>
+        <div>
+            <span class="label">For inquiries</span>
+            <a href="mailto:andy.andrianjatovoniaina@gmail.com">andy.andrianjatovoniaina@gmail.com</a>
+        </div>
+    </header>
 
-        <header class="hero" id="top">
-            <div>
-                <h1>Salut, moi c'est <span class="scribble">Andy</span> !</h1>
-                <!-- TODO: remplace par ton vrai titre / pitch -->
-                <p>Je conçois et je code des choses utiles, avec un petit grain de fantaisie.</p>
-                <a class="btn" href="#projects">Mes projets</a>
-                <a class="btn alt" href="#contact">Me écrire</a>
-            </div>
-            <div class="hero-art">
-                <svg viewBox="0 0 200 200" fill="none" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <!-- ordinateur doodle -->
-                    <path d="M30 40 Q100 34 170 40 Q174 100 170 130 Q100 136 30 130 Q26 90 30 40Z" fill="#8ecae6"/>
-                    <path d="M42 52 Q100 48 158 52 Q160 92 158 118 Q100 122 42 118 Q40 90 42 52Z" fill="#fffaf0"/>
-                    <path d="M60 78 L72 90 L60 102"/>
-                    <path d="M84 102 H110"/>
-                    <path d="M80 130 L74 160 M120 130 L126 160 M58 162 Q100 156 142 162"/>
+    <main class="stage">
+        <span class="big l" aria-hidden="true">An</span>
+
+        <figure class="art" aria-label="Illustration d'une tête d'où s'échappent des objets">
+            <svg viewBox="0 0 300 360" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <!-- objets qui s'échappent -->
+                <g class="float">
+                    <!-- casquette -->
+                    <path d="M92 70 Q96 26 150 24 Q204 26 208 70 Z" fill="#fff"/>
+                    <path d="M92 70 Q60 74 56 84 Q120 90 208 70" fill="#fff"/>
+                    <path d="M150 24 V70"/>
+                </g>
+                <g class="float">
+                    <!-- montre -->
+                    <rect x="44" y="130" width="30" height="30" rx="8" fill="#fff"/>
+                    <path d="M59 138 V146 L65 150"/>
+                    <path d="M52 130 L54 118 M66 130 L64 118 M52 160 L54 172 M66 160 L64 172"/>
+                </g>
+                <g class="float">
+                    <!-- chat -->
+                    <path d="M228 120 L232 100 L242 112 H258 L268 100 L272 120 Q278 140 250 146 Q222 140 228 120Z" fill="#fff"/>
+                    <circle cx="241" cy="124" r="2" fill="#111"/><circle cx="259" cy="124" r="2" fill="#111"/>
+                    <path d="M246 132 Q250 136 254 132"/>
+                </g>
+                <g class="float">
+                    <!-- ordinateur -->
+                    <rect x="116" y="104" width="68" height="46" rx="4" fill="#fff"/>
+                    <path d="M126 118 L134 126 L126 134 M142 134 H158"/>
+                    <path d="M108 154 H192"/>
+                </g>
+                <g class="float">
                     <!-- étincelles -->
-                    <path d="M178 20 v14 M171 27 h14" stroke="#ff8fab"/>
-                    <path d="M18 24 v10 M13 29 h10" stroke="#ffd93d"/>
-                    <path d="M170 160 q8 -10 16 0 q-8 10 -16 0Z" fill="#ffd93d"/>
-                </svg>
-            </div>
-        </header>
-    </div>
+                    <path d="M214 60 v16 M206 68 h16 M72 54 v12 M66 60 h12"/>
+                    <circle cx="232" cy="172" r="5" fill="#fff"/>
+                    <circle cx="70" cy="196" r="4" fill="#fff"/>
+                </g>
+                <!-- visage -->
+                <path d="M100 232 Q96 190 150 186 Q204 190 200 232 Q204 300 150 312 Q96 300 100 232Z" fill="#fff"/>
+                <!-- haut du crâne ouvert -->
+                <path d="M98 222 Q150 238 202 222" fill="#fff"/>
+                <!-- lunettes -->
+                <circle cx="128" cy="258" r="17" fill="#fff"/>
+                <circle cx="172" cy="258" r="17" fill="#fff"/>
+                <path d="M145 258 H155 M111 256 L98 250 M189 256 L202 250"/>
+                <circle cx="128" cy="258" r="3.5" fill="#111"/>
+                <circle cx="172" cy="258" r="3.5" fill="#111"/>
+                <!-- sourire -->
+                <path d="M132 290 Q150 304 168 290"/>
+                <!-- cou et col -->
+                <path d="M130 308 V332 M170 308 V332 M96 360 Q104 332 130 332 H170 Q196 332 204 360"/>
+            </svg>
+        </figure>
 
-    <section id="about">
-        <div class="wrap">
-            <h2>À propos</h2>
-            <div class="card about">
-                <div>
-                    <!-- TODO: remplace par ta bio -->
-                    <p>Je m'appelle Andy Andrianjatovoniaina. J'aime transformer des idées en produits simples et agréables à utiliser.</p>
-                    <ul class="tags">
-                        <!-- TODO: ajuste tes compétences -->
-                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>Design</li>
-                    </ul>
+        <span class="big r" aria-hidden="true">Dy</span>
+
+        <!-- TODO: remplace par ton vrai pitch -->
+        <p class="red up">
+            Dev &amp; designer<br>
+            Fan de doodles<br>
+            Amateur de bons projets<br>
+            Toujours en train d'apprendre<br>
+            Café, musique, carnets<br>
+            Et du code maintenant…
+        </p>
+        <p class="red mid">Et</p>
+        <p class="red down">
+            Je conçois des expériences numériques avec clarté, intention et un peu de caractère.
+            Ami de studios, de startups et d'entreprises curieuses.
+        </p>
+
+        <div class="lists">
+            <div>
+                <span class="label">Selected work</span>
+                <!-- TODO: tes vrais projets -->
+                <div class="links">
+                    <a href="https://github.com/AndyAndrianjatovo">Projet un</a>
+                    <a href="https://github.com/AndyAndrianjatovo">Projet deux</a>
+                    <a href="https://github.com/AndyAndrianjatovo">Projet trois</a>
                 </div>
-                <svg width="110" height="110" viewBox="0 0 100 100" fill="none" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round" aria-hidden="true">
-                    <circle cx="50" cy="50" r="40" fill="#ffd93d"/>
-                    <circle cx="36" cy="42" r="4" fill="#1f1f1f"/>
-                    <circle cx="64" cy="42" r="4" fill="#1f1f1f"/>
-                    <path d="M30 60 Q50 80 70 60"/>
-                </svg>
+            </div>
+            <div>
+                <span class="label">Elsewhere</span>
+                <div class="links">
+                    <a href="https://github.com/AndyAndrianjatovo">GitHub</a>
+                    <a href="mailto:andy.andrianjatovoniaina@gmail.com">E-mail</a>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section id="projects">
-        <div class="wrap">
-            <h2>Projets</h2>
-            <div class="grid">
-                <!-- TODO: remplace ces projets d'exemple -->
-                <article class="card project">
-                    <span class="sticker">nouveau</span>
-                    <h3>Projet un</h3>
-                    <p>Une courte description de ce projet et de ce que j'y ai appris.</p>
-                    <a href="https://github.com/AndyAndrianjatovo">Voir sur GitHub →</a>
-                </article>
-                <article class="card project">
-                    <h3>Projet deux</h3>
-                    <p>Une courte description de ce projet et de ce que j'y ai appris.</p>
-                    <a href="https://github.com/AndyAndrianjatovo">Voir sur GitHub →</a>
-                </article>
-                <article class="card project">
-                    <h3>Projet trois</h3>
-                    <p>Une courte description de ce projet et de ce que j'y ai appris.</p>
-                    <a href="https://github.com/AndyAndrianjatovo">Voir sur GitHub →</a>
-                </article>
-            </div>
-        </div>
-    </section>
+    <!-- Cartes pop-up -->
+    <aside class="pop" id="work" style="--r:-3deg">
+        <header><span>Work</span></header>
+        <p>Quelques projets choisis. Remplace-les par tes vrais travaux.</p>
+        <dl>
+            <dt>01</dt><dd><a href="https://github.com/AndyAndrianjatovo">Projet un</a></dd>
+            <dt>02</dt><dd><a href="https://github.com/AndyAndrianjatovo">Projet deux</a></dd>
+            <dt>03</dt><dd><a href="https://github.com/AndyAndrianjatovo">Projet trois</a></dd>
+        </dl>
+        <footer><button data-close>Close ×</button></footer>
+    </aside>
 
-    <section id="contact" class="contact">
-        <div class="wrap">
-            <div class="card">
-                <h2>On papote ?</h2>
-                <p>Un projet, une idée, ou juste envie de dire bonjour.</p>
-                <!-- TODO: vérifie l'adresse e-mail -->
-                <a class="btn" href="mailto:andy.andrianjatovoniaina@gmail.com">Écris-moi</a>
-                <a class="btn alt" href="https://github.com/AndyAndrianjatovo">GitHub</a>
-            </div>
-        </div>
-    </section>
+    <aside class="pop" id="about" style="--r:2deg">
+        <header><span>About 🌱</span></header>
+        <div class="photo"></div>
+        <!-- TODO: ta bio -->
+        <p>Je m'appelle Andy Andrianjatovoniaina. J'aime transformer des idées en produits simples et agréables à utiliser.</p>
+        <p class="scribble-note">ajoute ta vraie histoire ici ✎</p>
+        <footer><button data-close>Close ×</button></footer>
+    </aside>
 
-    <footer>fait à la main · © 2026 Andy ✌</footer>
+    <aside class="pop grey" id="playground" style="--r:-2deg">
+        <header><span>Playground</span></header>
+        <p>Un coin pour les expériences, les croquis et les idées à moitié finies.</p>
+        <footer><button data-close>Close ×</button></footer>
+    </aside>
+
+    <aside class="pop dark" id="contact" style="--r:3deg">
+        <header><span>Come say hi</span></header>
+        <dl>
+            <dt>Email</dt><dd><a href="mailto:andy.andrianjatovoniaina@gmail.com">andy.andrianjatovoniaina@gmail.com</a></dd>
+            <dt>Code</dt><dd><a href="https://github.com/AndyAndrianjatovo">GitHub</a></dd>
+        </dl>
+        <footer><button data-close>Close ×</button></footer>
+    </aside>
+
+    <script>
+        // Horloge locale
+        const clock = document.getElementById('clock');
+        const tick = () => { clock.textContent = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }); };
+        tick(); setInterval(tick, 30000);
+
+        // Cartes : ouvrir, fermer, mettre au premier plan, déplacer
+        let z = 10;
+        const front = el => { el.style.zIndex = ++z; };
+
+        document.querySelectorAll('[data-open]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = document.getElementById(btn.dataset.open);
+                card.classList.toggle('open');
+                front(card);
+            });
+        });
+
+        document.querySelectorAll('.pop').forEach(card => {
+            card.querySelector('[data-close]').addEventListener('click', () => card.classList.remove('open'));
+            card.addEventListener('pointerdown', () => front(card));
+
+            const bar = card.querySelector('header');
+            let dx = 0, dy = 0, dragging = false, sx, sy;
+            bar.addEventListener('pointerdown', e => { dragging = true; sx = e.clientX - dx; sy = e.clientY - dy; bar.setPointerCapture(e.pointerId); });
+            bar.addEventListener('pointermove', e => {
+                if (!dragging) return;
+                dx = e.clientX - sx; dy = e.clientY - sy;
+                card.style.translate = `${dx}px ${dy}px`;
+            });
+            bar.addEventListener('pointerup', () => { dragging = false; });
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') document.querySelectorAll('.pop.open').forEach(c => c.classList.remove('open'));
+        });
+    </script>
 </body>
 </html>
