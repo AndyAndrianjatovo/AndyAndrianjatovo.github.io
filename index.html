@@ -1,21 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy Andrianjatovoniaina</title>
+    <meta name="description" content="Portfolio d'Andy Andrianjatovoniaina">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="division">
-        <div class="image-wrong">
-            <img src="./images/user-interface.gif" alt="" srcset="">
+    <div class="wrap">
+        <nav>
+            <a class="logo" href="#top">andy ✎</a>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero" id="top">
+            <div>
+                <h1>Salut, moi c'est <span class="scribble">Andy</span> !</h1>
+                <!-- TODO: remplace par ton vrai titre / pitch -->
+                <p>Je conçois et je code des choses utiles, avec un petit grain de fantaisie.</p>
+                <a class="btn" href="#projects">Mes projets</a>
+                <a class="btn alt" href="#contact">Me écrire</a>
+            </div>
+            <div class="hero-art">
+                <svg viewBox="0 0 200 200" fill="none" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <!-- ordinateur doodle -->
+                    <path d="M30 40 Q100 34 170 40 Q174 100 170 130 Q100 136 30 130 Q26 90 30 40Z" fill="#8ecae6"/>
+                    <path d="M42 52 Q100 48 158 52 Q160 92 158 118 Q100 122 42 118 Q40 90 42 52Z" fill="#fffaf0"/>
+                    <path d="M60 78 L72 90 L60 102"/>
+                    <path d="M84 102 H110"/>
+                    <path d="M80 130 L74 160 M120 130 L126 160 M58 162 Q100 156 142 162"/>
+                    <!-- étincelles -->
+                    <path d="M178 20 v14 M171 27 h14" stroke="#ff8fab"/>
+                    <path d="M18 24 v10 M13 29 h10" stroke="#ffd93d"/>
+                    <path d="M170 160 q8 -10 16 0 q-8 10 -16 0Z" fill="#ffd93d"/>
+                </svg>
+            </div>
+        </header>
+    </div>
+
+    <section id="about">
+        <div class="wrap">
+            <h2>À propos</h2>
+            <div class="card about">
+                <div>
+                    <!-- TODO: remplace par ta bio -->
+                    <p>Je m'appelle Andy Andrianjatovoniaina. J'aime transformer des idées en produits simples et agréables à utiliser.</p>
+                    <ul class="tags">
+                        <!-- TODO: ajuste tes compétences -->
+                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li><li>Design</li>
+                    </ul>
+                </div>
+                <svg width="110" height="110" viewBox="0 0 100 100" fill="none" stroke="#1f1f1f" stroke-width="4" stroke-linecap="round" aria-hidden="true">
+                    <circle cx="50" cy="50" r="40" fill="#ffd93d"/>
+                    <circle cx="36" cy="42" r="4" fill="#1f1f1f"/>
+                    <circle cx="64" cy="42" r="4" fill="#1f1f1f"/>
+                    <path d="M30 60 Q50 80 70 60"/>
+                </svg>
+            </div>
         </div>
-        <div class="text-error">
-            Something missing.
-        </div>
-        <span class="button-return"> <a href="https://github.com/AndyAndrianjatovo">Take me back</a> </span>
     </section>
+
+    <section id="projects">
+        <div class="wrap">
+            <h2>Projets</h2>
+            <div class="grid">
+                <!-- TODO: remplace ces projets d'exemple -->
+                <article class="card project">
+                    <span class="sticker">nouveau</span>
+                    <h3>Projet un</h3>
+                    <p>Une courte description de ce projet et de ce que j'y ai appris.</p>
+                    <a href="https://github.com/AndyAndrianjatovo">Voir sur GitHub →</a>
+                </article>
+                <article class="card project">
+                    <h3>Projet deux</h3>
+                    <p>Une courte description de ce projet et de ce que j'y ai appris.</p>
+                    <a href="https://github.com/AndyAndrianjatovo">Voir sur GitHub →</a>
+                </article>
+                <article class="card project">
+                    <h3>Projet trois</h3>
+                    <p>Une courte description de ce projet et de ce que j'y ai appris.</p>
+                    <a href="https://github.com/AndyAndrianjatovo">Voir sur GitHub →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="wrap">
+            <div class="card">
+                <h2>On papote ?</h2>
+                <p>Un projet, une idée, ou juste envie de dire bonjour.</p>
+                <!-- TODO: vérifie l'adresse e-mail -->
+                <a class="btn" href="mailto:andy.andrianjatovoniaina@gmail.com">Écris-moi</a>
+                <a class="btn alt" href="https://github.com/AndyAndrianjatovo">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>fait à la main · © 2026 Andy ✌</footer>
 </body>
 </html>
