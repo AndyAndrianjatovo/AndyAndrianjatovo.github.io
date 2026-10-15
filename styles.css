@@ -67,22 +67,48 @@ button { font: inherit; color: inherit; text-transform: inherit; background: non
 .art {
     position: absolute;
     left: 46%; top: 50%;
-    width: min(26vw, 340px);
+    width: min(29vw, 420px);
     min-width: 240px;
-    margin: 0;
     z-index: 2;
     transform: translate(-50%, -50%);
 }
 
-.art svg { width: 100%; height: auto; overflow: visible; }
+.art:focus-visible { outline: 2px dashed var(--red); outline-offset: 8px; }
+.art svg { display: block; width: 100%; height: auto; overflow: visible; }
+.art text { text-transform: none; }
 
-.float { animation: float 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-.float:nth-of-type(2n) { animation-duration: 6.5s; animation-delay: -2s; }
-.float:nth-of-type(3n) { animation-duration: 4.2s; animation-delay: -1s; }
+/* Objets : explosion depuis le crâne, puis flottement */
+.art .obj, .art .bob { transform-box: fill-box; transform-origin: center; }
+.art .bob { animation: float 5s ease-in-out infinite; }
+.art .obj:nth-of-type(2n) .bob { animation-duration: 6.5s; animation-delay: -2s; }
+.art .obj:nth-of-type(3n) .bob { animation-duration: 4.2s; animation-delay: -1s; }
+.js .art:not(.burst) .obj { opacity: 0; }
+.art.burst .obj { animation: burst .9s cubic-bezier(.2, 1.25, .35, 1) var(--delay, 0s) both; }
 
 @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0); }
-    50% { transform: translateY(-9px) rotate(4deg); }
+    50% { transform: translateY(-6px) rotate(3deg); }
+}
+
+@keyframes burst {
+    from { transform: translate(var(--dx, 0), var(--dy, 0)) scale(.15) rotate(-30deg); opacity: 0; }
+    25% { opacity: 1; }
+    to { transform: none; opacity: 1; }
+}
+
+/* Le chat se cache de temps en temps */
+.art .cat { animation: peek 8s ease-in-out 2s infinite; }
+.art .paws { animation: paws 8s ease-in-out 2s infinite; }
+
+@keyframes peek {
+    0%, 72%, 100% { transform: translateY(0); }
+    78%, 88% { transform: translateY(64px); }
+    95% { transform: translateY(-4px); }
+}
+
+@keyframes paws {
+    0%, 71%, 96%, 100% { opacity: 1; }
+    73%, 93% { opacity: 0; }
 }
 
 /* ---------- Red copy ---------- */
@@ -180,7 +206,7 @@ button { font: inherit; color: inherit; text-transform: inherit; background: non
     .stage { height: auto; min-height: 0; padding: 0 18px 40px; display: flex; flex-direction: column; gap: 26px; }
     .big, .art, .red, .lists { position: static; transform: none; width: auto; }
     .big { font-size: 34vw; }
-    .big.l { order: 1; } .art { order: 2; width: 70%; margin: 0 auto; }
+    .big.l { order: 1; } .art { order: 2; width: 84%; margin: 0 auto; }
     .big.r { order: 3; text-align: right; } .red.up { order: 4; } .red.mid { order: 5; }
     .red.down { order: 6; } .lists { order: 7; grid-template-columns: 1fr 1fr; }
 }
